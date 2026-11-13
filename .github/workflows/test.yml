@@ -8,7 +8,7 @@ jobs:
   integration-tests:
     name: CI test on ethanol
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -16,13 +16,14 @@ jobs:
       - name: Install Pixi
         uses: prefix-dev/setup-pixi@v0.11.3
         with:
+          pixi-version: v0.67.2
           manifest-path: pyproject.toml
-          environments: base-cpu
+          environments: "base-cpu"
           cache: true
           locked: true
 
       - name: Check Contorsion installation
-        run: pixi run -e base-cpu contorsion --help
+        run: pixi run -e "base-cpu" contorsion --help
 
       - name: Run integration tests
-        run: pixi run -e base-cpu pytest tests/integration/ -v
+        run: pixi run -e "base-cpu" pytest tests/integration/ -v
