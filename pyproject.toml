@@ -18,6 +18,7 @@ platforms = ["linux-64"]
 
 [tool.pixi.environments]
 default = ["default"]
+base-cpu = ["cpu"]
 
 [tool.pixi.pypi-dependencies]
 contorsion = { path = ".", editable = true }
