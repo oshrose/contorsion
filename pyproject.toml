@@ -33,6 +33,7 @@ openff-toolkit = ">=0.17.1,<0.18"
 typer = ">=0.20.0,<0.21"
 rich = ">=14.2.0,<15"
 pytest = "*"
+filelock = ">=3.4,<4.0"
 # openff-interchange 0.4.8 breaks with numpy >= 2.4
 numpy = ">=2.3.4,<2.4"
 matplotlib = ">=3.10.7,<4"
@@ -55,3 +56,6 @@ cuda-cudart-dev = ">=12.9.79,<13"
 
 [tool.pixi.system-requirements]
 cuda = "12.9"
+
+[tool.pixi.feature.cpu]
+filelock = ">=3.4,<4.0"
