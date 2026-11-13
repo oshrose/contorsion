@@ -16,6 +16,9 @@ contorsion = "contorsion.drive_torsions:cli"
 channels = ["conda-forge"]
 platforms = ["linux-64"]
 
+[tool.pixi.environments]
+default = ["default"]
+
 [tool.pixi.pypi-dependencies]
 contorsion = { path = ".", editable = true }
 orb-models = ">=0.5.5"
@@ -28,6 +31,7 @@ cached-path = { git = "https://github.com/fjclark/cached_path.git", rev = "1cb8b
 openff-toolkit = ">=0.17.1,<0.18"
 typer = ">=0.20.0,<0.21"
 rich = ">=14.2.0,<15"
+pytest = "*"
 # openff-interchange 0.4.8 breaks with numpy >= 2.4
 numpy = ">=2.3.4,<2.4"
 matplotlib = ">=3.10.7,<4"
