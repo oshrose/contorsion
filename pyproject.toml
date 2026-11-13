@@ -54,8 +54,5 @@ warp-lang = "==1.11.1"
 openff-forcefields = ">=2026.1.0"
 cuda-cudart-dev = ">=12.9.79,<13"
 
-[tool.pixi.system-requirements]
-cuda = "12.9"
-
-[tool.pixi.feature.cpu]
-dependencies={}
+[tool.pixi.feature.cpu.dependencies]
+pytorch = ">=2.8.0"
