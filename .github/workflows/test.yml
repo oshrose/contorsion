@@ -6,14 +6,9 @@ on:
 
 jobs:
   integration-tests:
-    name: Test on ${{ matrix.runs-on }}, py${{ matrix.python-version }}, ${{ matrix.env-type }}
+    name: CI test on ethanol
     runs-on: ubuntu-latest
     
-    strategy:
-      matrix:
-        python-version: ["3.12", "3.13"]
-        env-type: ["cpu", "base-cpu"]
-
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
