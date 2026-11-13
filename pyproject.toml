@@ -58,4 +58,4 @@ cuda-cudart-dev = ">=12.9.79,<13"
 cuda = "12.9"
 
 [tool.pixi.feature.cpu]
-filelock = ">=3.4,<4.0"
+dependencies={}
